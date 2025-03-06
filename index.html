@@ -3,28 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../carsharing_website_project/css/reset.css">
-    <link rel="stylesheet" href="../carsharing_website_project/css/style.css">
+    <title> Car Sharing</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
 </head>
+
 <body>
-    <header>
-        <nav>
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__logo">
+          <img src="images/Icon.png" alt="">
+          <span>CAR</span> SHARING
+        </div>
 
+        <nav class="header__menu">
+          <a class="header__menu--link header__menu-link--active" href="#home">Home</a>
+          <a class="header__menu--link" href="#blog">Blog</a>
+          <a class="header__menu--link" href="#service">Service</a>
+          <a class="header__menu--link" href="#contact">Contact</a>
         </nav>
-    </header>
-    <main>
+      </div>
+    </div>
 
-    </main>
+    <div class="header__hero">
+      <div class="container">   
+        <h1 class="header__title">CAR SHARING</h1>
+        <p class="header__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    <footer>
+      <div class="header__buttons">
+        <a href="#contact" class="button button--big">Share a car</a>
+        <a href="#service" class="button button--secondary button--big">Key features</a>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="header__arrow">
+      <img src="images/Icon Arrow Down.png" alt="arrow pointing down" width="22" height="22">
+    </div>
+  </header>
+
+  <section class="section" id="blog">
+    <div class="container">
+
+      <h2 class="section__header">Blog</h2>
+
+      <div class="blog">
+        <article class="article">
+          <img class="article__image" src="images/photo1.png" alt="manual car gear lever">
+          <h3 class="article__title">LOREM IPSUM SIT DOLOR</h3>
+          <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="" class="button">Read More</a>
+        </article>
+
+      <article class="article">
+        <img class="article__image" src="images/photo2.png" alt="car front part">
+        <h3 class="article__title">LOREM IPSUM SIT DOLOR</h3>
+        <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="" class="button">Read More</a>
+      </article>
+
+      <article class="article">
+        <img class="article__image" src="images/photo3.png" alt="car interior under the hood">
+        <h3 class="article__title">LOREM IPSUM SIT DOLOR</h3>
+        <p class="article__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="" class="button">Read More</a>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--dark" id="service">
+    <div class="container">
+
+      <h2 class="section__header">Service</h2>
+
+      <div class="services">
+        <div class="service">
+        <img class="service__image" src="images/mini1.png" alt="automatic car gear lever">
+        <h3 class="service__title">LOREM IPSUM SIT DOLOR</h3>
+        <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna.</p>
+        <a href="" class="button">Read More</a>
+        </div>
+
+        <div class="service">
+        <img  class="service__image" src="images/mini2.png" alt="manual car gear lever">
+        <h3 class="service__title">LOREM IPSUM SIT DOLOR</h3>
+        <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna.</p>
+        <a href="" class="button">Read More</a>
+        </div>
+    
+        <div class="service">
+        <img  class="service__image" src="images/mini3.png" alt="car steering wheel">
+        <h3 class="service__title">LOREM IPSUM SIT DOLOR</h3>
+        <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna.</p>
+        <a href="" class="button">Read More</a>
+        </div>
+
+        <div class="service">
+        <img  class="service__image" src="images/mini4.png" alt="car steering wheel">
+        <h3 class="service__title">LOREM IPSUM SIT DOLOR</h3>
+        <p class="service__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna.</p>
+        <a href="" class="button">Read More</a>
+        </div>
+
+      </div>
+    </div>
+
+    </section>
+
+  <section class="section" id="contact">
+    <div class="container container__narrow">
+
+      <h2  class="section__header">Contact</h2>
+      
+      <div class="contact">
+        <div class="contact__image">
+          <img src="images/Form Photo.png" alt="two-cars">
+        </div>
+        <div class="contact__form">
+        <form class="contact__form" action="">
+            <input class="form-input" name="name" type="text" placeholder="Type your name" required>
+
+            <input class="form-input" name="email" type="email" placeholder="Type your email" required>
+
+            <textarea class="form-input" name="message" placeholder="Type your message" rows="6" required></textarea>
+
+
+            <div class="form-consent">
+            <input class="form-checkbox" type="checkbox" name="consent" id="consent" required>
+            <label class="form-consent-text" for="consent">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+            </label>
+
+            </div>
+
+            <button class="button button--secondary button--outline form-button-align-right">Send</button>
+        </div>
+        </form>
+        </div>
+    </div>
+    </section>
+
+    <footer class="section section--dark section--dark-footer">
+        <div class="container">
+        <div class="footer">
+
+          <div class="footer__logo header__logo">
+              <img src="images/Icon.png" alt="">
+              <span>CAR</span> SHARING
+          </div>
         
+          <nav class="footer__menu">
+            <div class="footer__menu-left">
+               <a class="footer__menu--link" href="">Home page</a>
+               <a class="footer__menu--link" href="">About us</a>
+               <a class="footer__menu--link" href="">Gallery</a>
+               <a class="footer__menu--link" href="">Share Regulation</a>
+              </div>
+
+            <div class="footer__menu-right"> 
+               <a class="footer__menu--link" href="">Price</a>
+               <a class="footer__menu--link" href="">Our fleet</a>
+               <a class="footer__menu--link" href="">Our clients</a>
+               <a class="footer__menu--link" href="">Contact</a>
+            </div>     
+          </nav>
+
+        </div>
+              <div class="footer__container-copyright">
+                <small class="footer__copyright">Copyright &copy; Coders Lab</small>
+              </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,474 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-color-primary:#FFFFFF;
+    --font-color-secondary:#000000;
+    --font-color-tertiary: #6A6A6A;
+    --font-color-quaternary:#FF0000;
+    --font-color-dimmed: #B2B2B2;
+    --button-color-primary:#FF0000;
+    --decoration-color-primary:#FF0000;
+    --button-color-secondary:#FFFFFF;
+    --font-primary: "Nunito Sans", sans-serif;
+    --font-secondary: "Open Sans", sans-serif;
+    --background-color-dark: #28272C;
+    --color-input-border: #D1D1D1;
+
+    --form-input-radius: 8px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-optical-sizing: auto;
+}
+
+.container {
+    max-width: 1088px;
+    margin-inline: auto;
+}
+
+.container__narrow {
+    max-width: 908px;
+    margin-inline: auto;
+}
+
+/* ------------------------HEADER----------------------------- */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height:800px;
+    background:
+       linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+       url("../images/Image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__top {
+    background: #00000066;
+}
+
+.header__top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--font-color-primary);
+}
+
+.header__logo span {
+    color: var(--font-color-quaternary);
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__menu--link {
+    display: block;
+    padding: 33px 40px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--font-color-primary);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header__menu-link--active,
+.header__menu--link:hover,
+.header__menu--link:focus {
+    background: #FFFFFF33;
+}
+
+.header__hero {
+    color: var(--font-color-primary);
+    flex-grow: 1; /* aby se to roztahlo do zbyvajici velikosti toho headeru, muzu to taky nastavit jen jako flex: 1 protoze grow je prvni hodnotou?*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__title {
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.header__description {
+    margin: 0;
+    font-size:16px;
+    line-height: 22px;
+    text-align: center;
+}
+
+
+/* ----------------------------BUTTON----------------------------- */
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--button-color-primary);
+    color: var(--font-color-primary);
+    border-radius: 50px; /* tady to staci nastavit na nejakou vyssi hodnotu, samo se to snizi tak, aby to byla polovina vysky */
+}
+
+.button--secondary {
+    background: var(--button-color-secondary);
+    color: var(--font-color-quaternary);
+}
+
+.button--big {
+    padding: 22px 55px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.button--outline {
+    background: var(--button-color-secondary);
+    color: var(--font-color-quaternary);
+    border: 1px solid var(--button-color-primary);
+}
+
+.header__buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.header__arrow {
+    background-color: var(--button-color-primary);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 27px);
+    bottom: -27px;
+}
+
+/* ----------------------------SECTION----------------------------- */
+
+.section {
+    padding-block: 90px;
+}
+
+.section--dark {
+    background: var(--background-color-dark);
+    color: var(--font-color-primary);
+}
+
+.section__header {
+    margin: 0 0 35px 0;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 47px;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.section__header::before,
+.section__header::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--button-color-primary);
+    border-radius: 50px;
+}
+
+
+
+
+/* .logo h1::before {
+    content: "";
+    width: 31px;
+    height: 35px;
+    display: inline-block;
+    background: url("../images/Icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 20px 10px;
+    vertical-align: middle;
+/* /* takhle to nechci delat, kdyz jde o logo firmy. cele by to melo byt v html i s ikonou */
+
+/* -----------------------------BLOG---------------------------------- */
+
+.blog {
+    display: flex;
+    gap: 16px;
+}
+
+.article {
+    flex: 1 1 33.3%;
+}
+
+.article__image {
+    width: 100%;
+}
+
+.article__title {
+    margin: 25px 0 15px 0;
+    font-family: var(--font-primary);
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--font-color-tertiary);
+}
+
+.article__description {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: var(--font-color-tertiary);
+}
+
+/* -----------------------------SERVICES---------------------------------- */
+
+.services {
+    display: flex;
+    gap: 30px;
+}
+
+.service {
+    flex: 1 1 25%;
+    text-align: center;
+}
+
+.service__image {
+    width: 170px;
+}
+
+.service__title {
+    margin: 25px 0 15px 0;
+    font-family: var(--font-primary);
+    font-size: 19px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--font-color-primary);
+}
+
+.service__description {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: var(--font-color-dimmed);
+}
+
+/* -----------------------------CONTACT---------------------------------- */
+
+.contact {
+    display: flex;
+    gap: 16px;
+}
+
+.contact__image,
+.contact__form {
+    flex: 1 1 50%;
+}
+
+.contact__image img {
+    width: 100%;
+}
+
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 22px;
+    border: 1px solid var(--color-input-border);
+    border-radius: var(--form-input-radius);
+}
+
+input:focus, textarea:focus {
+    border: 1px solid var(--button-color-primary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.55);
+}
+
+input, textarea {
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-button-align-right {
+    align-self: flex-end;
+}
+
+/* .form-consent {
+
+} */
+
+.form-consent-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--font-color-dimmed);
+    font-size: 10px;
+}
+
+.form-consent-text::before {
+    content:"";
+    display: inline-block;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px  solid var(--color-input-border);
+    border-radius: var(--form-input-radius);
+}
+
+.form-checkbox:checked + .form-consent-text::before {
+    background: url("../images/Icon\ Check.svg") no-repeat center;
+}
+
+.form-checkbox {
+    appearance: none;
+}
+
+.form-checkbox:focus {
+    outline: none;
+    border: none;
+}
+
+
+/* ------------------------------------FOOTER------------------------------------------ */
+
+.section--dark-footer {
+    height: 233px;
+    margin: 0;
+    padding-top: 40px;
+}
+
+
+
+/* .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    max-width: 300px;
+    max-height: fit-content;
+    padding: 20px;
+    margin: 0;
+} */
+
+/* 
+.footer .container {
+    max-width: 100%;
+} */
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--font-color-primary);
+}
+
+.footer__logo span {
+    color: var(--font-color-quaternary);
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 300px;
+    max-height: 97px;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.footer__menu-left {
+    display: flex;
+    flex-direction: column;
+    max-height: 80px;
+}
+
+.footer__menu-right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 120px;
+}
+
+.footer__menu--link {
+    padding-top: 7px;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--font-color-primary);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+}
+
+.footer__menu-link--active,
+.footer__menu--link:hover,
+.footer__menu--link:focus {
+    color: var(--font-color-quaternary);
+}
+
+.footer__copyright {
+    font-size: 12px;
+    color: var(--color-input-border);
+    padding: 0;
+
+}
+
+.footer__container-copyright {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 8px;
+}
